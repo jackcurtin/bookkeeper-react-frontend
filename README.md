@@ -20,3 +20,9 @@ The back-end for this app was developed during a pair-programming project with B
 Engineering Immersive course with General Assembly. This front end specifically was undertaken as a project after 
 graduating from the course as a way to become more comfortable with using React. Coming from and Angular background,
 the general concept of React was clear to me but it's specific syntax/workflow was something I needed to get used to.
+
+#### Resources
+This was as much a learning experience as it was a mission to provide a high-quality front-end to a back-end only
+project I wanted to showcase. Without any formal training in React, I learned a lot from the following two videos
+* [Programming with Mosh - Intro to React](https://www.youtube.com/watch?v=Ke90Tje7VS0)
+* [Brian Design - React Beginner Tutorial with Responsive Design](https://www.youtube.com/watch?v=I2UBjN5ER4s)
