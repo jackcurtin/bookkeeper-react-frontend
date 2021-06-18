@@ -5,6 +5,17 @@
     font-family: "PT Sans", sans-serif;
 }
 
+.home,
+.login,
+.contribute,
+.library {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
 .login {
     background-image: url('./media/photos/login.jpeg');
     background-position: center;
