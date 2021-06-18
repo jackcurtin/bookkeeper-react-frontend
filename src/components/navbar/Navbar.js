@@ -25,17 +25,17 @@ function Navbar () {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/library" className="nav-links" onClick={closeMobileMenu}>
                                 Library
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/contribute" className="nav-links" onClick={closeMobileMenu}>
                                 Contribute
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
                                 Login
                             </Link>
                         </li>
