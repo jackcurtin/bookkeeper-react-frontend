@@ -1,10 +1,8 @@
 import React, {Fragment} from "react";
 import "../../App.css"
-import CategoryCards from "../cards/CategoryCards";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import LibraryBooks from "./library/LibraryBooks";
 import LibraryHome from "./library/LibraryHome";
-
 export default function Library() {
     return (
         <Fragment>
