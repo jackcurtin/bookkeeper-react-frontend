@@ -4,3 +4,30 @@
     padding: 0;
     font-family: "PT Sans", sans-serif;
 }
+
+.login {
+    background-image: url('./media/photos/login.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
+
+.contribute {
+    background-image: url('./media/photos/contribute.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
+
+.library {
+    background-image: url('./media/photos/library.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
