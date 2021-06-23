@@ -32,7 +32,7 @@ function LibraryBookCards(props) {
                 <div className="library-book-cards-container">
                     <div className="library-book-cards-wrapper">
                         <ul className="library-book-cards-items">
-                            {books.map(book=> (
+                            {books.map(book => (
                                 <LibraryItemCard className="library-book-cards-items"
                                                  head={book.title}
                                                  cat1={`${book.author.firstName} ${book.author.lastName}`}

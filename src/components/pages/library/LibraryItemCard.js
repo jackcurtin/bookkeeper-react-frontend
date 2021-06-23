@@ -7,9 +7,9 @@ function LibraryItemCard(props) {
         <React.Fragment>
             <li className="library-item-card">
                 <div className="library-item-card-content">
-                    <h3 className="library-item-card-head">
+                    <h2 className="library-item-card-head">
                         {props.head}
-                    </h3>
+                    </h2>
                     <h4 className="library-item-card-cat1">{props.cat1}</h4>
                     <h4 className="library-item-card-cat2">{props.cat2}</h4>
                     <h4 className="library-item-card-cat3">{props.cat3}</h4>

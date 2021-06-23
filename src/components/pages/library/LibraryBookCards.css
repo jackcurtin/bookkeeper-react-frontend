@@ -21,7 +21,8 @@
 }
 
 .library-book-cards-items {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 1rem;
     border-radius: 10px;
     background: #fff;
