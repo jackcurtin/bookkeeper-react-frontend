@@ -1,19 +1,19 @@
 import React from "react";
-import LibraryBookCards from "./LibraryBookCards";
-import "../Library.css";
+import LibraryCards from "./LibraryCards";
+import "./Library.css";
 import { useParams } from 'react-router-dom';
 
 
-function LibraryBooks(props) {
+function LibraryCategories(props) {
     const { category } = useParams();
     return (
         <React.Fragment>
             <h1 className="library-cat-heading">All {category}</h1>
-            <LibraryBookCards
+            <LibraryCards
                 category = {category}
             />)
         </React.Fragment >
     )
 }
 
-export default LibraryBooks;
+export default LibraryCategories;

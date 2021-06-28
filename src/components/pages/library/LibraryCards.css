@@ -22,10 +22,11 @@
 
 .library-cards-items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 1rem;
     border-radius: 10px;
     background: #fff;
+    grid-gap: 12px;
 }
 
 .library-item-card{

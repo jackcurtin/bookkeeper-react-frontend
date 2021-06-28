@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import LibraryItemCard from "../LibraryItemCard";
-import "../LibraryCards.css"
+import LibraryItemCard from "../../cards/LibraryItemCard";
+import "./LibraryCards.css"
 
-function LibraryBookCards(props) {
+function LibraryCards(props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [data, setData] = useState([]);
@@ -85,4 +85,4 @@ function LibraryBookCards(props) {
     }
 }
 
-export default LibraryBookCards;
+export default LibraryCards;
