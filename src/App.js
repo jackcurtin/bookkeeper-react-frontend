@@ -3,7 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./components/pages/Home";
 import Library from "./components/pages/Library";
-import Contribute from "./components/pages/Contribute";
+import Contribute from "./components/pages/contribute/Contribute";
 import Login from "./components/pages/Login";
 
 function App() {
