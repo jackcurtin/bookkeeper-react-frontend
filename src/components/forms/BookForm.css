@@ -1,6 +1,9 @@
 .book-form{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 250px;
     align-items: center;
+    background-color: lightgray;
+    padding: 30px;
+    margin: 10px;
 }

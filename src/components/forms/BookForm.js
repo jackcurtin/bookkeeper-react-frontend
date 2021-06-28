@@ -5,14 +5,17 @@ class BookForm extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            value: '',
+            bookTitle: '',
             authors: [],
             genres: [],
             publishers: [],
             error: null,
             authorsLoaded: false,
             genresLoaded: false,
-            publishersLoaded: false
+            publishersLoaded: false,
+            authorInput: '',
+            genreInput: '',
+            publisherInput: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -20,11 +23,18 @@ class BookForm extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({value: event.target.value});
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        console.log(value + " " + name)
+
+        this.setState({
+            [name]: value
+        });
     }
 
     handleSubmit(event) {
-        alert('The following was submitted: ' + this.state.value);
+        console.log(`The following was submitted: ${this.state.bookTitle}, ${this.state.authorInput}, ${this.state.genreInput}, ${this.state.publisherInput}`);
         event.preventDefault();
     }
 
@@ -89,11 +99,15 @@ class BookForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="book-form">
                     <label>
                         Title:
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        <input
+                            name="bookTitle"
+                            type="text"
+                            value={this.state.bookTitle}
+                            onChange={this.handleChange} />
                     </label>
                     <label>
                         Author:
-                        <select>
+                        <select name="authorInput" onChange={this.handleChange}>
                             {
                                 authors.map(author => (
                                     <option value={`${author.firstName} ${author.lastName}`}>
@@ -105,22 +119,21 @@ class BookForm extends React.Component {
                     </label>
                     <label>
                         Genre:
-                        <select>
+                        <select name= "genreInput" onChange={this.handleChange}>
                             {
                                 genres.map(genre => (
-                                    <option value={genre.name}>
-                                        {genre.name}
-                                    </option>
+                                    <option value={genre.name}>{genre.name}</option>
                                 ))
                             }
                         </select>
                     </label>
                     <label>
                         Publisher:
-                        <select>
+                        <select name="publisherInput" onChange={this.handleChange}>
                             {
                                 publishers.map(publisher => (
-                                    <option value={publisher.name}>
+                                    <option
+                                        value={publisher.name}>
                                         {publisher.name}
                                     </option>
                                 ))
