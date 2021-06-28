@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from "react";
-import LibraryItemCard from "./LibraryItemCard";
-import "./LibraryCards.css"
+import LibraryItemCard from "../LibraryItemCard";
+import "../LibraryCards.css"
 
-function LibraryBookCards(props) {
+function LibraryAuthorCards(props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [books, setBooks] = useState([]);
+    const [authors, setAuthors] = useState([]);
 
     useEffect(() => {
-        fetch("https://bookkeeperdb.herokuapp.com/api/books")
+        fetch("https://bookkeeperdb.herokuapp.com/api/authors")
             .then(res => res.json())
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setBooks(result);
+                    setAuthors(result);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -32,12 +32,9 @@ function LibraryBookCards(props) {
                 <div className="library-cards-container">
                     <div className="library-cards-wrapper">
                         <ul className="library-cards-items">
-                            {books.map(book => (
+                            {authors.map(author => (
                                 <LibraryItemCard className="library-cards-items"
-                                                 head={book.title}
-                                                 cat1={`${book.author.firstName} ${book.author.lastName}`}
-                                                 cat2={`${book.genre.name}`}
-                                                 cat3={`${book.publisher.name}`}>
+                                                 head={`${author.firstName} ${author.lastName}`}>
                                 </LibraryItemCard>
                             ))}
                         </ul>
@@ -48,4 +45,4 @@ function LibraryBookCards(props) {
     }
 }
 
-export default LibraryBookCards;
+export default LibraryAuthorCards;
