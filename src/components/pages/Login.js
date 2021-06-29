@@ -4,11 +4,12 @@ import LoginForm from "../forms/LoginForm";
 import useToken from "../useToken";
 
 export default function Login() {
-    const { token, setToken } = useToken();
+    const { token, setToken } = useToken()
     return (
         <>
             <h1 className="login">LOGIN</h1>
-            <LoginForm setToken={setToken}/>
+            <LoginForm
+                setToken={setToken}/>
         </>
     )
 }

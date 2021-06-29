@@ -5,7 +5,7 @@ import Home from "./components/pages/Home";
 import Library from "./components/pages/Library";
 import Contribute from "./components/pages/contribute/Contribute";
 import Login from "./components/pages/Login";
-import {useState} from "react";
+import Logout from "./components/pages/Logout";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
               <Route path="/library" component = {Library}/>
               <Route path="/contribute" component = {Contribute}/>
               <Route path="/login" component = {Login}/>
+              <Route path="/logout" component = {Logout}/>
           </Switch>
       </Router>
     </div>
