@@ -108,6 +108,7 @@ class BookForm extends React.Component {
                     <label>
                         Author:
                         <select name="authorInput" onChange={this.handleChange}>
+                            <option value={null}> </option>
                             {
                                 authors.map(author => (
                                     <option value={`${author.firstName} ${author.lastName}`}>
@@ -120,6 +121,7 @@ class BookForm extends React.Component {
                     <label>
                         Genre:
                         <select name= "genreInput" onChange={this.handleChange}>
+                            <option value={null}> </option>
                             {
                                 genres.map(genre => (
                                     <option value={genre.name}>{genre.name}</option>
@@ -130,6 +132,7 @@ class BookForm extends React.Component {
                     <label>
                         Publisher:
                         <select name="publisherInput" onChange={this.handleChange}>
+                            <option value={null}> </option>
                             {
                                 publishers.map(publisher => (
                                     <option

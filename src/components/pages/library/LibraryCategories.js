@@ -11,7 +11,7 @@ function LibraryCategories(props) {
             <h1 className="library-cat-heading">All {category}</h1>
             <LibraryCards
                 category = {category}
-            />)
+            />
         </React.Fragment >
     )
 }
