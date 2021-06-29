@@ -2,7 +2,14 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import "./Navbar.css"
 
+function getToken() {
+    const tokenString = sessionStorage.getItem('token');
+    const userToken = JSON.parse(tokenString);
+    return userToken?.token
+}
+
 function Navbar () {
+    const token = getToken();
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
@@ -20,8 +27,8 @@ function Navbar () {
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Home
+                            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+                                Login
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -32,11 +39,6 @@ function Navbar () {
                         <li className="nav-item">
                             <Link to="/contribute" className="nav-links" onClick={closeMobileMenu}>
                                 Contribute
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-                                Login
                             </Link>
                         </li>
                     </ul>
