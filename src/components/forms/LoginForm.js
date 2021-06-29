@@ -24,7 +24,7 @@ export default function LoginForm({ setToken }) {
             password
         });
         setToken(token);
-        console.log(token)
+        window.location.reload();
     }
 
     return(

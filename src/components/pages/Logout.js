@@ -1,12 +1,13 @@
-import useToken from "../useToken";
-import LoginForm from "../forms/LoginForm";
 import React from "react";
 
 export default function Logout() {
-    localStorage.clear();
+    if (localStorage.token){
+        localStorage.clear();
+        window.location.reload();
+    }
     return (
         <>
-            <h1 className="login">Thanks, see you again soon!</h1>
+            <h1 className="login">See you next time!</h1>
         </>
     )
 }
