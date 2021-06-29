@@ -5,7 +5,6 @@ class BookForm extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            bookTitle: '',
             authors: [],
             genres: [],
             publishers: [],
@@ -13,9 +12,13 @@ class BookForm extends React.Component {
             authorsLoaded: false,
             genresLoaded: false,
             publishersLoaded: false,
+            bookTitle: '',
             authorInput: '',
             genreInput: '',
-            publisherInput: ''
+            publisherInput: '',
+            synopsisInput: '',
+            pageCountInput: '',
+            isbnInput: ''
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -33,8 +36,27 @@ class BookForm extends React.Component {
     }
 
     handleSubmit(event) {
-        console.log(`The following was submitted: ${this.state.bookTitle}, ${this.state.authorInput}, ${this.state.genreInput}, ${this.state.publisherInput}`);
         event.preventDefault();
+        const formFields = {
+            title: this.state.bookTitle,
+            synopsis: this.state.synopsisInput,
+            pageCount: this.state.pageCountInput,
+            isbn: this.state.isbnInput,
+            genre_name: this.state.genreInput,
+            author_first_name: this.state.authorInput.slice(0, this.state.authorInput.indexOf(" ")),
+            author_last_name: this.state.authorInput.slice(this.state.authorInput.indexOf("")),
+            publisher_name: this.state.publisherInput
+        }
+        console.log(`The following was submitted: ${formFields.title}`);
+        fetch("https://bookkeeperdb.herokuapp.com/api/books/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(formFields)
+        })
+            .then(message => console.log(message))
     }
 
     componentDidMount() {
@@ -141,6 +163,29 @@ class BookForm extends React.Component {
                                 ))
                             }
                         </select>
+                    </label>
+                    <label>
+                        PageCount:
+                        <input
+                            name="pageCountInput"
+                            type="text"
+                            value={this.state.pageCountInput}
+                            onChange={this.handleChange} />
+                    </label>
+                    <label>
+                        ISBN:
+                        <input
+                            name="isbnInput"
+                            type="text"
+                            value={this.state.isbnInput}
+                            onChange={this.handleChange} />
+                    </label>
+                    <label>
+                        Synopsis:
+                        <textarea
+                            name="synopsisInput"
+                            value={this.state.synopsisInput}
+                            onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit"/>
                 </form>
