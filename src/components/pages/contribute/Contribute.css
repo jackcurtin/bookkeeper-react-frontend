@@ -1,4 +1,9 @@
 .contribute-forms{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.author-genre-publisher-forms{
+    display: flex;
+    justify-content: space-between;
 }

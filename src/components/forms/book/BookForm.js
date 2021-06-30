@@ -1,5 +1,6 @@
 import React from "react";
 import './BookForm.css'
+import submitForm from "../submitForm";
 
 class BookForm extends React.Component {
     constructor(props) {
@@ -48,19 +49,7 @@ class BookForm extends React.Component {
                 .slice(1),
             publisher_name: this.state.publisherInput
         }
-        const headers = new Headers({
-            'Content-Type' : 'application/json',
-            'Authorization': `${localStorage.token}`
-        })
-        console.log(`The following title was submitted: ${formFields.title}`);
-        fetch("https://bookkeeperdb.herokuapp.com/api/books/add", {
-            credentials: "include",
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify(formFields)
-        })
-            .then((response) => console.log(response))
-            .catch(error => console.log(error))
+        submitForm("https://bookkeeperdb.herokuapp.com/api/books/add", formFields)
     }
 
     componentDidMount() {
@@ -122,6 +111,7 @@ class BookForm extends React.Component {
         } else {
             return (
                 <form onSubmit={this.handleSubmit} className="book-form">
+                    <h2>Add a Book to our Database</h2>
                     <label>
                         Title:
                         <input

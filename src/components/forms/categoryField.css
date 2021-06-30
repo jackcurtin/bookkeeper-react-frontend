@@ -1,0 +1,9 @@
+.category-form{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    align-items: center;
+    background-color: lightgray;
+    padding: 30px;
+    margin: 10px;
+}
