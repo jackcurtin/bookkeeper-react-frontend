@@ -40,23 +40,28 @@ class BookForm extends React.Component {
         const formFields = {
             title: this.state.bookTitle,
             synopsis: this.state.synopsisInput,
-            pageCount: this.state.pageCountInput,
-            isbn: this.state.isbnInput,
+            pageCount: parseInt(this.state.pageCountInput),
+            isbn: parseInt(this.state.isbnInput),
             genre_name: this.state.genreInput,
-            author_first_name: this.state.authorInput.slice(0, this.state.authorInput.indexOf(" ")),
-            author_last_name: this.state.authorInput.slice(this.state.authorInput.indexOf("")),
+            author_first_name: 'Cormac',
+            author_last_name: 'McCarthy',
+            // author_first_name: this.state.authorInput.slice(0, this.state.authorInput.indexOf(" ")),
+            // author_last_name: this.state.authorInput.slice(this.state.authorInput.indexOf("")),
             publisher_name: this.state.publisherInput
         }
-        console.log(`The following was submitted: ${formFields.title}`);
+        const headers = new Headers({
+            'Content-Type' : 'application/json',
+            'Authorization': `${localStorage.token}`
+        })
+        console.log(`The following title was submitted: ${formFields.title}`);
         fetch("https://bookkeeperdb.herokuapp.com/api/books/add", {
+            credentials: "include",
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.token}`
-            },
+            headers: headers,
             body: JSON.stringify(formFields)
         })
-            .then(message => console.log(message))
+            .then((response) => console.log(response))
+            .catch(error => console.log(error))
     }
 
     componentDidMount() {
