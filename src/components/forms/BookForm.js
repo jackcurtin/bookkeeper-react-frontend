@@ -43,10 +43,9 @@ class BookForm extends React.Component {
             pageCount: parseInt(this.state.pageCountInput),
             isbn: parseInt(this.state.isbnInput),
             genre_name: this.state.genreInput,
-            author_first_name: 'Cormac',
-            author_last_name: 'McCarthy',
-            // author_first_name: this.state.authorInput.slice(0, this.state.authorInput.indexOf(" ")),
-            // author_last_name: this.state.authorInput.slice(this.state.authorInput.indexOf("")),
+            author_first_name: this.state.authorInput.slice(0, this.state.authorInput.indexOf(" ")),
+            author_last_name: this.state.authorInput.slice(this.state.authorInput.indexOf(" "))
+                .slice(1),
             publisher_name: this.state.publisherInput
         }
         const headers = new Headers({
