@@ -3,6 +3,8 @@ import "../../../App.css"
 import BookForm from "../../forms/book/BookForm";
 import "./Contribute.css"
 import AuthorForm from "../../forms/AuthorForm";
+import GenreForm from "../../forms/GenreForm";
+import PublisherForm from "../../forms/PublisherForm";
 
 export default function Contribute() {
     return (
@@ -12,6 +14,8 @@ export default function Contribute() {
                 <BookForm />
                 <div className="author-genre-publisher-forms">
                     <AuthorForm />
+                    <GenreForm />
+                    <PublisherForm />
                 </div>
             </div>
         </>)

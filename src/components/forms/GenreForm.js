@@ -58,6 +58,7 @@ class GenreForm extends Component {
                             value={this.state.description}
                             onChange={this.handleChange} />
                     </label>
+                    <input type="submit" value="Submit"/>
                 </form>
             );
         }
