@@ -25,8 +25,11 @@ function Navbar () {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contribute" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/contribute" className={localStorage.token ? "nav-links" : "nav-hide"} onClick={closeMobileMenu}>
                                 Contribute
+                            </Link>
+                            <Link to="/register" className={!localStorage.token ? "nav-links" : "nav-hide"} onClick={closeMobileMenu}>
+                                Register
                             </Link>
                         </li>
                         <li className="nav-item">
