@@ -111,7 +111,7 @@ class BookForm extends React.Component {
         } else {
             return (
                 <form onSubmit={this.handleSubmit} className="book-form">
-                    <h2>Add a Book to our Database</h2>
+                    <h2>Add a Book</h2>
                     <input
                         name="bookTitle"
                         type="text"

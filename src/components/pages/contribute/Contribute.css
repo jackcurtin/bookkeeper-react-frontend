@@ -5,17 +5,31 @@
     margin: 10px;
 }
 .author-genre-publisher-forms{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
 }
 .contribute-top-row{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 10px;
+    margin-bottom: 15px;
 }
 .contribution-guidelines{
     width: 100%;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    padding: 20px;
 }
 .contribution-bullets{
     list-style: square;
     padding-left: 20px;
+}
+.contribution-text{
+    line-height: 30px;
+}
+li{
+    font-size: smaller;
 }

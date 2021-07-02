@@ -41,23 +41,19 @@ class GenreForm extends Component {
         } else {
             return (
                 <form onSubmit={this.handleSubmit} className="category-form">
-                    <h2>Add a Genre to our Database</h2>
-                    <label>
-                        Name:
-                        <input
-                            name="name"
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        Description:
-                        <input
-                            name="description"
-                            type="text"
-                            value={this.state.description}
-                            onChange={this.handleChange} />
-                    </label>
+                    <h2>Add a Genre</h2>
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                        value={this.state.name}
+                        onChange={this.handleChange} />
+                    <input
+                        name="description"
+                        type="text"
+                        placeholder="Description"
+                        value={this.state.description}
+                        onChange={this.handleChange} />
                     <input type="submit" value="Submit"/>
                 </form>
             );

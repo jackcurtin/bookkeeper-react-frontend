@@ -41,23 +41,19 @@ class PublisherForm extends Component {
         } else {
             return (
                 <form onSubmit={this.handleSubmit} className="category-form">
-                    <h2>Add a Publisher to our Database</h2>
-                    <label>
-                        Name:
+                    <h2>Add a Publisher</h2>
                         <input
                             name="name"
                             type="text"
+                            placeholder="Name"
                             value={this.state.name}
                             onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        Address:
                         <input
                             name="address"
                             type="text"
+                            placeholder="Address"
                             value={this.state.address}
                             onChange={this.handleChange} />
-                    </label>
                     <input type="submit" value="Submit"/>
                 </form>
             );

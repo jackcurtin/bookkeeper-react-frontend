@@ -4,9 +4,9 @@
     width: 100%;
     align-items: center;
     background-color: lightgray;
-    padding: 30px;
-    margin: 10px;
+    padding: 25px;
     text-align: left;
+    border-radius: 25px;
 }
 input, textarea, select{
     width: 70%;

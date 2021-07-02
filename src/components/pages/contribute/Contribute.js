@@ -14,7 +14,7 @@ export default function Contribute() {
                 <div className="contribute-top-row">
                     <div className="contribution-guidelines">
                         <h2>Contribution Guidelines</h2>
-                        <p>
+                        <p className="contribution-text">
                             Thanks for helping us expand our currently modest database! To help you
                             understand how this data works together, please read through the following
                             bulletpoints if this is your first time submitting.
