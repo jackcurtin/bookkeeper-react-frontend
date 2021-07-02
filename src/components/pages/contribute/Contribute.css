@@ -2,8 +2,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
 }
 .author-genre-publisher-forms{
     display: flex;
     justify-content: space-between;
+}
+.contribute-top-row{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.contribution-guidelines{
+    width: 100%;
+}
+.contribution-bullets{
+    list-style: square;
+    padding-left: 20px;
 }

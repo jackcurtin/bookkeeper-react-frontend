@@ -112,76 +112,60 @@ class BookForm extends React.Component {
             return (
                 <form onSubmit={this.handleSubmit} className="book-form">
                     <h2>Add a Book to our Database</h2>
-                    <label>
-                        Title:
-                        <input
-                            name="bookTitle"
-                            type="text"
-                            value={this.state.bookTitle}
-                            onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        Author:
-                        <select name="authorInput" onChange={this.handleChange}>
-                            <option value={null}> </option>
-                            {
-                                authors.map(author => (
-                                    <option value={`${author.firstName} ${author.lastName}`}>
-                                        {`${author.firstName} ${author.lastName}`}
-                                    </option>
-                                ))
-                            }
-                        </select>
-                    </label>
-                    <label>
-                        Genre:
-                        <select name= "genreInput" onChange={this.handleChange}>
-                            <option value={null}> </option>
-                            {
-                                genres.map(genre => (
-                                    <option value={genre.name}>{genre.name}</option>
-                                ))
-                            }
-                        </select>
-                    </label>
-                    <label>
-                        Publisher:
-                        <select name="publisherInput" onChange={this.handleChange}>
-                            <option value={null}> </option>
-                            {
-                                publishers.map(publisher => (
-                                    <option
-                                        value={publisher.name}>
-                                        {publisher.name}
-                                    </option>
-                                ))
-                            }
-                        </select>
-                    </label>
-                    <label>
-                        PageCount:
-                        <input
-                            name="pageCountInput"
-                            type="text"
-                            value={this.state.pageCountInput}
-                            onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        ISBN:
-                        <input
-                            name="isbnInput"
-                            type="text"
-                            value={this.state.isbnInput}
-                            onChange={this.handleChange} />
-                    </label>
-                    <label>
-                        Synopsis:
-                        <textarea
-                            name="synopsisInput"
-                            value={this.state.synopsisInput}
-                            onChange={this.handleChange} />
-                    </label>
-                    <input type="submit" value="Submit"/>
+                    <input
+                        name="bookTitle"
+                        type="text"
+                        value={this.state.bookTitle}
+                        placeholder="Title"
+                        onChange={this.handleChange} 
+                        className="form-input"/>
+                    <select name="authorInput" onChange={this.handleChange}>
+                        <option value={null}>Author</option>
+                        {
+                            authors.map(author => (
+                                <option value={`${author.firstName} ${author.lastName}`}>
+                                    {`${author.firstName} ${author.lastName}`}
+                                </option>
+                            ))
+                        }
+                    </select>
+                    <select name= "genreInput" onChange={this.handleChange}>
+                        <option value={null}>Genre</option>
+                        {
+                            genres.map(genre => (
+                                <option value={genre.name}>{genre.name}</option>
+                            ))
+                        }
+                    </select>
+                    <select name="publisherInput" onChange={this.handleChange}>
+                        <option value={null}>Publisher</option>
+                        {
+                            publishers.map(publisher => (
+                                <option
+                                    value={publisher.name}>
+                                    {publisher.name}
+                                </option>
+                            ))
+                        }
+                    </select>
+                    <input
+                        name="pageCountInput"
+                        type="text"
+                        placeholder="Page Count"
+                        value={this.state.pageCountInput}
+                        onChange={this.handleChange} />
+                    <input
+                        name="isbnInput"
+                        type="text"
+                        placeholder="ISBN"
+                        value={this.state.isbnInput}
+                        onChange={this.handleChange} />
+                    <textarea
+                        name="synopsisInput"
+                        placeholder="Synopsis"
+                        value={this.state.synopsisInput}
+                        onChange={this.handleChange} />
+                <input type="submit" value="Submit"/>
                 </form>
             );
         }

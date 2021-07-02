@@ -1,9 +1,14 @@
 .book-form{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
     align-items: center;
     background-color: lightgray;
     padding: 30px;
     margin: 10px;
+    text-align: left;
+}
+input, textarea, select{
+    width: 70%;
+    box-sizing: border-box;
 }
