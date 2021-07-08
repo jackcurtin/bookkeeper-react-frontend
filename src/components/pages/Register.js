@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "../../App.css"
-import LoginForm from "../forms/LoginForm";
+import RegisterForm from "../forms/RegisterForm";
 import useToken from "../useToken";
 
 export default function Register() {
@@ -8,7 +8,7 @@ export default function Register() {
     return (
         <>
             <h1 className="register">Create an Account</h1>
-            <LoginForm
+            <RegisterForm
                 setToken={setToken}/>
         </>
     )

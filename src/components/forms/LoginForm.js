@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './book/BookForm.css';
+import { useHistory } from 'react-router-dom';
 
 async function loginUser(credentials) {
     return fetch('https://bookkeeperdb.herokuapp.com/auth/users/login', {
@@ -17,6 +18,8 @@ export default function LoginForm({ setToken }) {
     const [userName, setUserName] = useState();
     const [password, setPassword] = useState();
 
+    const history = useHistory();
+
     const handleSubmit = async e => {
         e.preventDefault();
         const token = await loginUser({
@@ -24,7 +27,7 @@ export default function LoginForm({ setToken }) {
             password
         });
         setToken(token.jwt);
-        // window.location.reload();
+        history.push("/");
     }
 
     return(
