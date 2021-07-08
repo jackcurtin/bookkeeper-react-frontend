@@ -2,28 +2,34 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './book/BookForm.css';
 
-async function loginUser(credentials) {
-    return fetch('https://bookkeeperdb.herokuapp.com/auth/users/login', {
+async function createUser(credentials) {
+    return fetch('https://bookkeeperdb.herokuapp.com/auth/users/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(credentials)
     })
-    .then(data => data.json())
+        .then(data => data.json())
 }
 
 export default function LoginForm({ setToken }) {
     const [userName, setUserName] = useState();
+    const [emailAddress, setEmail] = useState();
     const [password, setPassword] = useState();
 
     const handleSubmit = async e => {
         e.preventDefault();
+        const createConf = await createUser({
+            userName,
+            emailAddress,
+            password
+        })
         const token = await loginUser({
             userName,
             password
         });
-        setToken(token.jwt);
+        setToken(token);
         // window.location.reload();
     }
 
@@ -32,6 +38,10 @@ export default function LoginForm({ setToken }) {
             <label>
                 Username:
                 <input type="text" onChange={event => setUserName(event.target.value)}/>
+            </label>
+            <label>
+                Email Address:
+                <input type="text" onChange={event => setEmail(event.target.value)}/>
             </label>
             <label>
                 Password:
