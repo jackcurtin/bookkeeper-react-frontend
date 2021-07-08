@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './book/BookForm.css';
+import './accountForm.css'
 import { useHistory } from 'react-router-dom';
 import loginUser from './LoginForm';
 
@@ -34,7 +34,8 @@ export default function RegisterForm({ setToken }) {
     }
 
     return(
-        <form onSubmit={handleSubmit} className="book-form">
+        <div className="form-container">
+            <form onSubmit={handleSubmit} className="account-form register-form">
             <label>
                 Username:
                 <input type="text" onChange={event => setUserName(event.target.value)}/>
@@ -49,6 +50,7 @@ export default function RegisterForm({ setToken }) {
             </label>
             <input type="submit" value="Submit"/>
         </form>
+        </div>
     )
 }
 

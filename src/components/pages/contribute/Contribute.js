@@ -28,12 +28,12 @@ export default function Contribute() {
                                 <li>
                                     There are no duplicates allowed in the database, limited by the respective title/name.
                                 </li>
-                                <li>
+                                {/* <li>
                                     The ISBN is used to pull a corresponding book cover from the Google Books API. However,
                                     the entries are restricted by Book Title, not ISBN as to avoid a multitude of different book
                                     editions. This is to ensure the database remains concise, as the purpose of this app is to 
                                     log and share reading habits rather than collections.;
-                                </li>
+                                </li> */}
                             </ul>
                         </p>
                     </div>

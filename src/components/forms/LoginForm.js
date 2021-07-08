@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './book/BookForm.css';
+import './accountForm.css';
 import { useHistory } from 'react-router-dom';
 
 async function loginUser(credentials) {
@@ -28,10 +28,12 @@ export default function LoginForm({ setToken }) {
         });
         setToken(token.jwt);
         history.push("/");
+        window.location.reload();
     }
 
     return(
-        <form onSubmit={handleSubmit} className="book-form">
+        <div className="form-container">
+            <form onSubmit={handleSubmit} className="account-form">
             <label>
                 Username:
                 <input type="text" onChange={event => setUserName(event.target.value)}/>
@@ -40,8 +42,9 @@ export default function LoginForm({ setToken }) {
                 Password:
                 <input type="password" onChange={event => setPassword(event.target.value)}/>
             </label>
-            <input type="submit" value="Submit"/>
+            <input classname="submit-button" type="submit" value="Submit"/>
         </form>
+        </div>
     )
 }
 

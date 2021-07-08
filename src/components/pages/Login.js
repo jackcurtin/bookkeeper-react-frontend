@@ -7,9 +7,11 @@ export default function Login() {
     const { token, setToken } = useToken()
     return (
         <>
-            <h1 className="login">LOGIN</h1>
+        <section className="login">
+        <h1>LOGIN</h1>
             <LoginForm
                 setToken={setToken}/>
+        </section>
         </>
     )
 }

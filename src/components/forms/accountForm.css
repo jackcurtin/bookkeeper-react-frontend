@@ -1,0 +1,31 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.account-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    background-color: rgba(300, 300, 300, 0.6);
+    padding: 15px;
+}
+.register-form{
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+label{
+    font-size: medium;
+    margin: 5px 0;
+}
+
+input{
+    width: 150px;
+}
+.submit-button{
+    width: 10px;
+}

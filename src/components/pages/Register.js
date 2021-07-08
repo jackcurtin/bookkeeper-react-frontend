@@ -7,9 +7,11 @@ export default function Register() {
     const { token, setToken } = useToken()
     return (
         <>
-            <h1 className="register">Create an Account</h1>
+        <div className="register">
+        <h1>REGISTER</h1>
             <RegisterForm
                 setToken={setToken}/>
+        </div>
         </>
     )
 }
