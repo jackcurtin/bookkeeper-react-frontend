@@ -8,7 +8,7 @@
     text-align: left;
     border-radius: 25px;
 }
-input, textarea, select{
+.book-form-input, .book-form-submit, .book-form-select{
     width: 70%;
     box-sizing: border-box;
 }

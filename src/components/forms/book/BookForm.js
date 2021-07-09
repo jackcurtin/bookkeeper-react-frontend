@@ -118,8 +118,10 @@ class BookForm extends React.Component {
                         value={this.state.bookTitle}
                         placeholder="Title"
                         onChange={this.handleChange} 
-                        className="form-input"/>
-                    <select name="authorInput" onChange={this.handleChange}>
+                        className="book-form-input"/>
+                    <select name="authorInput"
+                    onChange={this.handleChange}
+                    className="book-form-select">
                         <option value={null}>Author</option>
                         {
                             authors.map(author => (
@@ -129,7 +131,9 @@ class BookForm extends React.Component {
                             ))
                         }
                     </select>
-                    <select name= "genreInput" onChange={this.handleChange}>
+                    <select name= "genreInput"
+                    onChange={this.handleChange}
+                    className="book-form-select">
                         <option value={null}>Genre</option>
                         {
                             genres.map(genre => (
@@ -137,7 +141,9 @@ class BookForm extends React.Component {
                             ))
                         }
                     </select>
-                    <select name="publisherInput" onChange={this.handleChange}>
+                    <select name="publisherInput"
+                    onChange={this.handleChange}
+                    className="book-form-select">
                         <option value={null}>Publisher</option>
                         {
                             publishers.map(publisher => (
@@ -153,19 +159,22 @@ class BookForm extends React.Component {
                         type="text"
                         placeholder="Page Count"
                         value={this.state.pageCountInput}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        className="book-form-input" />
                     <input
                         name="isbnInput"
                         type="text"
                         placeholder="ISBN"
                         value={this.state.isbnInput}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        className="book-form-input" />
                     <textarea
                         name="synopsisInput"
                         placeholder="Synopsis"
                         value={this.state.synopsisInput}
-                        onChange={this.handleChange} />
-                <input type="submit" value="Submit"/>
+                        onChange={this.handleChange}
+                        className="book-form-input" />
+                <input type="submit" value="Submit" className="book-form-submit"/>
                 </form>
             );
         }
