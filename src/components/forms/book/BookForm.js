@@ -112,13 +112,23 @@ class BookForm extends React.Component {
             return (
                 <form onSubmit={this.handleSubmit} className="book-form">
                     <h2>Add a Book</h2>
+                    <div className="book-form-fields">
                     <input
                         name="bookTitle"
                         type="text"
                         value={this.state.bookTitle}
                         placeholder="Title"
                         onChange={this.handleChange} 
-                        className="book-form-input"/>
+                        className="book-form-input"
+                    />
+                    <input
+                        name="pageCountInput"
+                        type="text"
+                        placeholder="Page Count"
+                        value={this.state.pageCountInput}
+                        onChange={this.handleChange}
+                        className="book-form-input" 
+                    />
                     <select name="authorInput"
                     onChange={this.handleChange}
                     className="book-form-select">
@@ -131,6 +141,13 @@ class BookForm extends React.Component {
                             ))
                         }
                     </select>
+                    <input
+                        name="isbnInput"
+                        type="text"
+                        placeholder="ISBN"
+                        value={this.state.isbnInput}
+                        onChange={this.handleChange}
+                        className="book-form-input" />
                     <select name= "genreInput"
                     onChange={this.handleChange}
                     className="book-form-select">
@@ -141,6 +158,12 @@ class BookForm extends React.Component {
                             ))
                         }
                     </select>
+                    <textarea
+                        name="synopsisInput"
+                        placeholder="Synopsis"
+                        value={this.state.synopsisInput}
+                        onChange={this.handleChange}
+                        className="book-form-input book-form-synopsis" />
                     <select name="publisherInput"
                     onChange={this.handleChange}
                     className="book-form-select">
@@ -154,26 +177,7 @@ class BookForm extends React.Component {
                             ))
                         }
                     </select>
-                    <input
-                        name="pageCountInput"
-                        type="text"
-                        placeholder="Page Count"
-                        value={this.state.pageCountInput}
-                        onChange={this.handleChange}
-                        className="book-form-input" />
-                    <input
-                        name="isbnInput"
-                        type="text"
-                        placeholder="ISBN"
-                        value={this.state.isbnInput}
-                        onChange={this.handleChange}
-                        className="book-form-input" />
-                    <textarea
-                        name="synopsisInput"
-                        placeholder="Synopsis"
-                        value={this.state.synopsisInput}
-                        onChange={this.handleChange}
-                        className="book-form-input" />
+                    </div>
                 <input type="submit" value="Submit" className="book-form-submit"/>
                 </form>
             );

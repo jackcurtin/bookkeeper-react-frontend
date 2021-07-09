@@ -9,6 +9,24 @@
     border-radius: 25px;
 }
 .book-form-input, .book-form-submit, .book-form-select{
-    width: 70%;
     box-sizing: border-box;
+    margin: 0 10%;
+    width: 80%;
+}
+.book-form-submit{
+    width: 60%;
+    margin-top: 6px;
+}
+.book-form-fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 6px;
+    align-items: center;
+}
+.book-form-synopsis{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    height: 100%;
 }
