@@ -3,6 +3,9 @@ This app allows users to log their book collection, while simultaneously helping
 can create new entries for books, authors, publishers, and genres. If any of those fields already exist in the database,
 they can utilize entries that already exist.
 
+#### Deployment
+https://main.d2y5z0hduq87qy.amplifyapp.com/
+
 #### User Stories
 As a user, I should be able to...
 * browse the public book listings without logging in.
