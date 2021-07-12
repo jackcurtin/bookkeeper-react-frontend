@@ -9,7 +9,7 @@ https://main.d2y5z0hduq87qy.amplifyapp.com/
 #### User Stories
 As a user, I should be able to...
 - [x] browse the public book listings without logging in.
-- [] use the search box in the Navbar to look for book, author, publisher, or genre listings by keyword.
+- [ ] use the search box in the Navbar to look for book, author, publisher, or genre listings by keyword.
 - [x] create and account / log in if I already have one.
 - [] add existing books to my collection.
 - [x] create new listings for books that are not in the database yet.
