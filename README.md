@@ -11,12 +11,12 @@ As a user, I should be able to...
 - [x] browse the public book listings without logging in.
 - [ ] use the search box in the Navbar to look for book, author, publisher, or genre listings by keyword.
 - [x] create and account / log in if I already have one.
-- [] add existing books to my collection.
+- [ ] add existing books to my collection.
 - [x] create new listings for books that are not in the database yet.
-- [] add books to my list of favorites.
-- [] see the latest additions to the database.
-- [] see a randomized book selection refreshed daily.
-- [] add the daily book selection to my collection if it is not already there.
+- [ ] add books to my list of favorites.
+- [ ] see the latest additions to the database.
+- [ ] see a randomized book selection refreshed daily.
+- [ ] add the daily book selection to my collection if it is not already there.
 
 #### Personal Journey
 The back-end for this app was developed during a pair-programming project with Bharti Gupta during our Software
