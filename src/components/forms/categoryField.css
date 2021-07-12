@@ -1,9 +1,19 @@
 .category-form{
+    justify-self: center;
     display: flex;
     flex-direction: column;
     width: 380px;
+    height: 200px;
     align-items: center;
+    justify-content: space-evenly;
     background-color: lightgray;
     padding: 30px;
     border-radius: 25px;
+}
+.author-form-field{
+    width: 45%;
+    align-self: center;
+}
+.author-right-column{
+    margin-left: 10%;
 }

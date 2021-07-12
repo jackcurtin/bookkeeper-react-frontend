@@ -46,30 +46,38 @@ class AuthorForm extends Component {
             return (
                 <form onSubmit={this.handleSubmit} className="category-form">
                     <h2>Add an Author</h2>
-                    <input
-                        name="firstName"
-                        type="text"
-                        placeholder="First Name"
-                        value={this.state.firstName}
-                        onChange={this.handleChange} />
-                    <input
-                        name="lastName"
-                        type="text"
-                        placeholder="Last Name"
-                        value={this.state.lastName}
-                        onChange={this.handleChange} />
-                    <input
-                        name="age"
-                        type="text"
-                        placeholder="Age (as of today)"
-                        value={this.state.age}
-                        onChange={this.handleChange} />
-                    <input
-                        name="nationality"
-                        type="text"
-                        placeholder="Nationality"
-                        value={this.state.nationality}
-                        onChange={this.handleChange} />
+                    <div className="author-form-row">
+                        <input
+                            name="firstName"
+                            type="text"
+                            placeholder="First Name"
+                            className="author-form-field"
+                            value={this.state.firstName}
+                            onChange={this.handleChange} />
+                        <input
+                            name="lastName"
+                            type="text"
+                            placeholder="Last Name"
+                            className="author-form-field author-right-column"
+                            value={this.state.lastName}
+                            onChange={this.handleChange} />
+                    </div>
+                    <div className="author-form-row">
+                        <input
+                            name="age"
+                            type="text"
+                            placeholder="Age (as of today)"
+                            className="author-form-field"
+                            value={this.state.age}
+                            onChange={this.handleChange} />
+                        <input
+                            name="nationality"
+                            type="text"
+                            placeholder="Nationality"
+                            className="author-form-field author-right-column"
+                            value={this.state.nationality}
+                            onChange={this.handleChange} />
+                    </div>
                     <input type="submit" value="Submit"/>
                 </form>
             );
